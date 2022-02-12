@@ -51,13 +51,23 @@ bookApp.getBooks = function () {
     const selection = document.querySelector('#bookSubject');
     let selectedValue = selection.value
 
+    const eraSelection = document.querySelector('#era');
+    let selectedEra = eraSelection.value
+    console.log(selectedEra)
+
     console.log(selectedValue)
 
-    const bookUrl = `https://openlibrary.org/subjects/${selectedValue}.json`
+    const bookUrl = `https://openlibrary.org/subjects/${selectedValue}.json?=published_in=${selectedEra}`
+
+
     console.log(bookUrl);
 
     // note: i dont think we need this const
     // const url = new URL(bookUrl)
+    // url.search = new URLSearchParams({
+    //     published_in: `${selectedEra}`
+    // })
+    // console.log(url)
 
     fetch(bookUrl)
         .then(function (response) {
@@ -78,7 +88,9 @@ bookApp.getBooks = function () {
 }
 
 bookApp.displayBooks = function (dataFromApi) {
-    const bookUl = document.querySelector('.bookResults')
+
+    const bookUl = document.querySelector('.bookResults');
+    bookUl.innerHTML = '';
     dataFromApi.forEach(function (bookObject) {
         const bookList = document.createElement('li');
         const title = document.createElement('h2');
@@ -95,7 +107,7 @@ bookApp.displayBooks = function (dataFromApi) {
         const coverUrl = `https://covers.openlibrary.org/b/id/${idNumber}.jpg`
         image.src = coverUrl
         image.alt = `${bookObject.title} cover`
-        console.log(image.src);
+        // console.log(image.src);
 
         // author.textContent = `${jsonResponse.works[i].authors[0].name}`;
 
@@ -108,8 +120,6 @@ bookApp.displayBooks = function (dataFromApi) {
 
 bookApp.init = function () {
     bookApp.getSubject()
-
-
 }
 
 
