@@ -43,8 +43,6 @@ bookApp.getSubject = function () {
 // store the api call info
 
 
-// note: we need to make the id number dynamic
-// const coverUrl = `https://covers.openlibrary.org/b/id/{idNumber}/s.jpg`
 
 
 bookApp.getBooks = function () {
@@ -85,15 +83,25 @@ bookApp.displayBooks = function (dataFromApi) {
         const bookList = document.createElement('li');
         const title = document.createElement('h2');
         const author = document.createElement('p');
+
         // Add image element when we get book cover data from API
+        const image = document.createElement('img');
 
         title.textContent = bookObject.title;
         author.textContent = bookObject.authors[0].name;
+
+        const idNumber = bookObject.cover_id;
+        // note: we need to make the id number dynamic
+        const coverUrl = `https://covers.openlibrary.org/b/id/${idNumber}.jpg`
+        image.src = coverUrl
+        image.alt = `${bookObject.title} cover`
+        console.log(image.src);
 
         // author.textContent = `${jsonResponse.works[i].authors[0].name}`;
 
         bookList.appendChild(title);
         bookList.appendChild(author);
+        bookList.appendChild(image);
         bookUl.appendChild(bookList);
     })
 }
