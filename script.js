@@ -28,6 +28,7 @@
 // Author
 // Book Cover
 
+// Namespace for App
 const bookApp = {};
 
 const form = document.querySelector('form');
@@ -65,14 +66,36 @@ bookApp.getBooks = function () {
             return response.json()
         })
         .then(function (jsonResponse) {
-            console.log(`Here are your recommendations for books about ${selectedValue}:`);
-            for (let i = 0; i < jsonResponse.works.length; i++) {
-                console.log(`${jsonResponse.works[i].title} by ${jsonResponse.works[i].authors[0].name}`)
+            console.log(jsonResponse)
+            // console.log(`Here are your recommendations for books about ${selectedValue}:`);
+            // for (let i = 0; i < jsonResponse.works.length; i++) {
+            //     console.log(`${jsonResponse.works[i].title} by ${jsonResponse.works[i].authors[0].name}`)
 
-            }
-
+            // }
+            const worksData = jsonResponse.works;
+            // console.log(titleData); 
+            bookApp.displayBooks(worksData);
 
         })
+}
+
+bookApp.displayBooks = function (dataFromApi) {
+    const bookUl = document.querySelector('.bookResults')
+    dataFromApi.forEach(function (bookObject) {
+        const bookList = document.createElement('li');
+        const title = document.createElement('h2');
+        const author = document.createElement('p');
+        // Add image element when we get book cover data from API
+
+        title.textContent = bookObject.title;
+        author.textContent = bookObject.authors[0].name;
+
+        // author.textContent = `${jsonResponse.works[i].authors[0].name}`;
+
+        bookList.appendChild(title);
+        bookList.appendChild(author);
+        bookUl.appendChild(bookList);
+    })
 }
 
 bookApp.init = function () {
