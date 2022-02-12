@@ -1,4 +1,6 @@
 // User navigates to landing page with drop down menu containing pre-selected book subjects
+
+
         // API DATA
             // create url to include the specific search parameters of pre-selected subject types (ex. canadian_poetry, romance, mystery etc.)
             // use fetch('url') syntax to return the data in json format to console
