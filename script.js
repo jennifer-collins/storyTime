@@ -44,12 +44,13 @@ bookApp.getSubject = function () {
 
 
 
-
+// getting data from api
 bookApp.getBooks = function () {
     // create our url endpoint
 
     const selection = document.querySelector('#bookSubject');
     let selectedValue = selection.value
+    const apiKey = 'AIzaSyBt9dJvG6Epw3nwxoLVa_AU_4CzUGOdWzc'
 
     const eraSelection = document.querySelector('#era');
     let selectedEra = eraSelection.value
@@ -57,17 +58,11 @@ bookApp.getBooks = function () {
 
     console.log(selectedValue)
 
-    const bookUrl = `https://openlibrary.org/subjects/${selectedValue}.json?published_in=${selectedEra}`
+    const bookUrl = `https://www.googleapis.com/books/v1/volumes?q=+subject:${selectedValue}&orderBy=newest&maxResults=12&key=${apiKey}`
 
 
     console.log(bookUrl);
 
-    // note: i dont think we need this const
-    // const url = new URL(bookUrl)
-    // url.search = new URLSearchParams({
-    //     published_in: `${selectedEra}`
-    // })
-    // console.log(url)
 
     fetch(bookUrl)
         .then(function (response) {
@@ -80,14 +75,15 @@ bookApp.getBooks = function () {
             //     console.log(`${jsonResponse.works[i].title} by ${jsonResponse.works[i].authors[0].name}`)
 
             // }
-            const worksData = jsonResponse.works;
-            // console.log(titleData); 
-            bookApp.displayBooks(worksData);
+            const worksData = jsonResponse.items;
             console.log(worksData)
+            bookApp.displayBooks(worksData);
+
+
 
         })
 }
-
+// adding book data to the page
 bookApp.displayBooks = function (dataFromApi) {
 
     const bookUl = document.querySelector('.bookResults');
@@ -101,14 +97,22 @@ bookApp.displayBooks = function (dataFromApi) {
         // Add image element when we get book cover data from API
         const image = document.createElement('img');
 
-        title.textContent = bookObject.title;
-        author.textContent = bookObject.authors[0].name;
+        title.textContent = bookObject.volumeInfo.title;
+        author.textContent = bookObject.volumeInfo.authors;
 
-        const idNumber = bookObject.cover_id;
+        // note: this conditional statement returns either 2 authors or 1 and a genre
+        // if (bookObject.volumeInfo.authors.length > 1) {
+        //     // console.log(bookObject.volumeInfo.authors.length);
+        //     author.textContent = `${bookObject.volumeInfo.authors[0]} and ${bookObject.volumeInfo.authors[1]}`
+        // } else {
+        //     author.textContent = `${bookObject.volumeInfo.authors[0]}`;
+        // }
+
+        // const idNumber = bookObject.cover_id;
         // note: we need to make the id number dynamic
-        const coverUrl = `https://covers.openlibrary.org/b/id/${idNumber}.jpg`
-        image.src = coverUrl
-        image.alt = `${bookObject.title} cover`
+        // const coverUrl = `https://covers.openlibrary.org/b/id/${idNumber}.jpg`
+        image.src = bookObject.volumeInfo.imageLinks.thumbnail
+        image.alt = `${bookObject.volumeInfo.title} cover`
         // console.log(image.src);
 
         // author.textContent = `${jsonResponse.works[i].authors[0].name}`;
