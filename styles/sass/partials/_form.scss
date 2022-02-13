@@ -1,0 +1,11 @@
+.formContainer {
+    background-color: $backgroundColorPrimary;
+    height: 30vh;
+}
+
+/* Add border to fieldset or form */
+
+fieldset {
+    background-color: $bookListBackground;
+    border: none;
+}

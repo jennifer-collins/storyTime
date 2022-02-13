@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Roboto+Serif:wght@300;500;600&display=swap');
+
+/* Base Font Styles */
+
+html {
+    font-size: 125%;
+}
+
+/* Typography */
+body {
+    font-family: $paragraphFont;
+    font-weight: 400;
+    font-size: 1rem;
+    color: $bodyFont;
+    /* Add line-height and letter-spacing */
+}
+
+h1, h2 {
+    font-family: $headerFont;
+    color: $headingText;
+    margin: 0;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 3rem;
+    text-transform: lowercase;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 1rem;
+    text-transform: uppercase;
+}

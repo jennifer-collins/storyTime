@@ -12,64 +12,71 @@
 <body>
 
     <header>
-
-        <h1>title of our app!</h1>
-
+        <div class="wrapper">
+            <h1>title of our app!</h1>
+        </div><!-- END .wrapper -->
     </header>
 
     <main>
-
+        
         <section class="formContainer">
+            <div class="wrapper">
+    
+                <form action="#">
+                    <fieldset>
+                        <select name="bookSubject" id="bookSubject">
+                            <!-- consider adding these elements with js -->
+                            <option value="initial" disabled selected>Pick a topic</option>
+                            <option value="art">Art</option>
+                            <option value="non_fiction">Non-Fiction</option>
+                            <option value="fiction">Fiction</option>
+                            <option value="poetry">Poetry</option>
+                            <option value="mystery">Mystery</option>
+                            <option value="history">History</option>
+                            <option value="romance">Romance</option>
+                            <option value="fantasy">Fantasy</option>
+                            <option value="graphic_novels">Graphic Novels</option>
+                            <option value="biographies">Biographies</option>
+                            <option value="self_help">Self Help</option>
+    
+                        </select>
+    
+                        <select name="era" id="era">
+                            <option value="1500-1600">1500-1600</option>
+                            <option value="1700-1900">1700-1900</option>
+                            <option value="1900-1950">1900-1950</option>
+                            <option value="1950-1970">1950-1970</option>
+                            <option value="1970-1980">1970-1980</option>
+                            <option value="1980-1990">1980-1990</option>
+                            <option value="1990-2000">1990-2000</option>
+                            <option value="2000-2010">2000-2010</option>
+                            <option value="2010-2015">2010-2015</option>
+                            <option value="2015-2020">2015-2020</option>
+                        </select>
+    
+                        <button>Get Books</button>
+                    </fieldset>
+                </form>
+            </div><!-- END .wrapper -->
+        </section><!-- END .formContainer Section -->
 
-            <form action="#">
-                <fieldset>
-                    <select name="bookSubject" id="bookSubject">
-                        <!-- consider adding these elements with js -->
-                        <option value="initial" disabled selected>Pick a topic</option>
-                        <option value="art">Art</option>
-                        <option value="non_fiction">Non-Fiction</option>
-                        <option value="fiction">Fiction</option>
-                        <option value="poetry">Poetry</option>
-                        <option value="mystery">Mystery</option>
-                        <option value="history">History</option>
-                        <option value="romance">Romance</option>
-                        <option value="fantasy">Fantasy</option>
-                        <option value="graphic_novels">Graphic Novels</option>
-                        <option value="biographies">Biographies</option>
-                        <option value="self_help">Self Help</option>
-
-                    </select>
-
-                    <select name="era" id="era">
-                        <option value="1500-1600">1500-1600</option>
-                        <option value="1700-1900">1700-1900</option>
-                        <option value="1900-1950">1900-1950</option>
-                        <option value="1950-1970">1950-1970</option>
-                        <option value="1970-1980">1970-1980</option>
-                        <option value="1980-1990">1980-1990</option>
-                        <option value="1990-2000">1990-2000</option>
-                        <option value="2000-2010">2000-2010</option>
-                        <option value="2010-2015">2010-2015</option>
-                        <option value="2015-2020">2015-2020</option>
-                    </select>
-
-                </fieldset>
-                <button>Get Books</button>
-
-            </form>
-
-        </section>
         <section class="bookResultsContainer">
-            <ul class="bookResults">
-                <!-- add contents with js -->
+            <div class="wrapper">
+                <ul class="bookResults">
+                    <!-- add contents with js -->
+    
+                </ul>
 
-            </ul>
-
-        </section>
+            </div><!-- END .wrapper -->
+        </section><!-- END .bookResultsContainer Section -->
 
     </main>
 
-    <footer>Created at <a href="junocollege.com">Juno College</a> By Seanna and Jenn</footer>
+    <footer>
+        <div class="wrapper">
+            <p>Created at <a href="junocollege.com">Juno College</a> By Seanna and Jenn</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>

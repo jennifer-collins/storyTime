@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Roboto+Serif:wght@300;500;600&display=swap");
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -233,4 +234,83 @@ html {
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+/* Site Fonts */
+/* Site Colors */
+/* Base Font Styles */
+html {
+  font-size: 125%;
+}
+
+/* Typography */
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #171717;
+  /* Add line-height and letter-spacing */
+}
+
+h1, h2 {
+  font-family: "Roboto Serif", sans-serif;
+  color: #264e70;
+  margin: 0;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 3rem;
+  text-transform: lowercase;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  max-width: 1260px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  background-color: #bbd4ce;
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header h1 {
+  text-align: center;
+}
+
+.formContainer {
+  background-color: #bbd4ce;
+  height: 30vh;
+}
+
+/* Add border to fieldset or form */
+fieldset {
+  background-color: #fdebd3;
+  border: none;
 }
