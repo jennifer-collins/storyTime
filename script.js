@@ -52,11 +52,14 @@ bookApp.getBooks = function () {
     let selectedValue = selection.value
     const apiKey = 'AIzaSyBt9dJvG6Epw3nwxoLVa_AU_4CzUGOdWzc'
 
-    const eraSelection = document.querySelector('#era');
-    let selectedEra = eraSelection.value
-    console.log(selectedEra)
+    // const eraSelection = document.querySelector('#era');
+    // let selectedEra = eraSelection.value
+    // // console.log(selectedEra)
 
-    console.log(selectedValue)
+    // console.log(selectedValue)
+
+    // const sortSelection = document.querySelector('#sort')
+    // let selectedSort = sortSelection.value
 
     const bookUrl = `https://www.googleapis.com/books/v1/volumes?q=+subject:${selectedValue}&orderBy=newest&maxResults=12&key=${apiKey}`
 
