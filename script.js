@@ -93,6 +93,7 @@ bookApp.displayBooks = function (dataFromApi) {
     bookUl.innerHTML = '';
     dataFromApi.forEach(function (bookObject) {
         const bookList = document.createElement('li');
+        bookList.classList.add('bookListLi');
         const title = document.createElement('h2');
         const author = document.createElement('p');
 
