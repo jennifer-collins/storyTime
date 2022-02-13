@@ -8,4 +8,40 @@
 fieldset {
     background-color: $bookListBackground;
     border: none;
+    display: flex;
+    justify-content: center;
+    button {
+        margin: 10px 10px;
+        padding: 10px 10px;
+        border: none;
+        background-color: $headingText;
+        color: white;
+        font-family: $paragraphFont;
+        font-size: 1rem;
+        font-weight: 400;
+        text-align: center;
+        cursor: pointer;
+        &:hover,
+        &:focus {
+            background-color: $backgroundColorSecondary;
+            color: white;
+            box-shadow: 5px 5px 5px rgba($headingText, 0.5)
+        }
+    }
+}
+
+select {
+    appearance: none;
+    font-family: $paragraphFont;
+    font-weight: 300;
+    color: $bodyFont;
+    border: none;
+    background-color: white;
+    text-transform: lowercase;
+    font-size: 1rem;
+    padding: 10px 10px;
+    margin: 10px;
+    option {
+        text-transform: lowercase;
+    }
 }
