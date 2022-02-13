@@ -57,7 +57,7 @@ bookApp.getBooks = function () {
 
     console.log(selectedValue)
 
-    const bookUrl = `https://openlibrary.org/subjects/${selectedValue}.json?=published_in=${selectedEra}`
+    const bookUrl = `https://openlibrary.org/subjects/${selectedValue}.json?published_in=${selectedEra}`
 
 
     console.log(bookUrl);
@@ -74,7 +74,7 @@ bookApp.getBooks = function () {
             return response.json()
         })
         .then(function (jsonResponse) {
-            console.log(jsonResponse)
+            // console.log(jsonResponse)
             // console.log(`Here are your recommendations for books about ${selectedValue}:`);
             // for (let i = 0; i < jsonResponse.works.length; i++) {
             //     console.log(`${jsonResponse.works[i].title} by ${jsonResponse.works[i].authors[0].name}`)
@@ -83,6 +83,7 @@ bookApp.getBooks = function () {
             const worksData = jsonResponse.works;
             // console.log(titleData); 
             bookApp.displayBooks(worksData);
+            console.log(worksData)
 
         })
 }
