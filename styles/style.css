@@ -266,7 +266,7 @@ h1 {
 
 h2 {
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
 }
 
@@ -355,4 +355,46 @@ select {
 }
 select option {
   text-transform: lowercase;
+}
+
+.bookResults {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.bookResults .bookListLi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: calc(33.3% - 20px);
+  margin: 10px 10px;
+  text-align: center;
+  height: 650px;
+  background-color: #fdebd3;
+}
+.bookResults .bookListLi img {
+  width: 250px;
+  margin-bottom: 50px;
+}
+.bookResults .bookListLi h2, .bookResults .bookListLi p {
+  width: 321px;
 }

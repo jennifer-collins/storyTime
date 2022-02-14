@@ -1,0 +1,25 @@
+.bookResults {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    .bookListLi {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: calc(33.3% - 20px);
+        margin: 10px 10px;
+        text-align: center;
+        height: 650px;
+        background-color: $bookListBackground;
+        img {
+            width: 250px;
+            margin-bottom: 50px;
+        }
+        h2, p {
+            width: 321px;
+        }
+    }
+}
+

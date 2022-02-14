@@ -61,7 +61,16 @@ bookApp.getBooks = function () {
     // const sortSelection = document.querySelector('#sort')
     // let selectedSort = sortSelection.value
 
-    const bookUrl = `https://www.googleapis.com/books/v1/volumes?q=+subject:${selectedValue}&orderBy=newest&maxResults=12&key=${apiKey}`
+    
+    const bookUrl = `https://www.googleapis.com/books/v1/volumes?q=+subject:${selectedValue}&orderBy=newest&maxResults=12&key=${apiKey}`;
+    
+    // const bookUrl = new URL('https://www.googleapis.com/books/v1/volumes?q=+');
+    // bookUrl.search = new URLSearchParams({
+    //     subject: selectedValue,
+    //     orderBy: 'newest',
+    //     maxResults: 12,
+    //     key: apiKey
+    // })
 
 
     console.log(bookUrl);
@@ -72,14 +81,14 @@ bookApp.getBooks = function () {
             return response.json()
         })
         .then(function (jsonResponse) {
-            // console.log(jsonResponse)
+            console.log(jsonResponse)
             // console.log(`Here are your recommendations for books about ${selectedValue}:`);
             // for (let i = 0; i < jsonResponse.works.length; i++) {
             //     console.log(`${jsonResponse.works[i].title} by ${jsonResponse.works[i].authors[0].name}`)
 
             // }
             const worksData = jsonResponse.items;
-            console.log(worksData)
+            // console.log(worksData)
             bookApp.displayBooks(worksData);
 
 
@@ -114,15 +123,15 @@ bookApp.displayBooks = function (dataFromApi) {
         // const idNumber = bookObject.cover_id;
         // note: we need to make the id number dynamic
         // const coverUrl = `https://covers.openlibrary.org/b/id/${idNumber}.jpg`
-        image.src = bookObject.volumeInfo.imageLinks.thumbnail
+        image.src = bookObject.volumeInfo.imageLinks.smallThumbnail
         image.alt = `${bookObject.volumeInfo.title} cover`
         // console.log(image.src);
 
         // author.textContent = `${jsonResponse.works[i].authors[0].name}`;
 
+        bookList.appendChild(image);
         bookList.appendChild(title);
         bookList.appendChild(author);
-        bookList.appendChild(image);
         bookUl.appendChild(bookList);
     })
 }
