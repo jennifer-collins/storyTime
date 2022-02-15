@@ -28,6 +28,9 @@
 // Author
 // Book Cover
 
+// FILTER (stretch goal)
+// filter data by language 
+
 // Namespace for App
 const bookApp = {};
 
@@ -61,9 +64,9 @@ bookApp.getBooks = function () {
     // const sortSelection = document.querySelector('#sort')
     // let selectedSort = sortSelection.value
 
-    
+
     const bookUrl = `https://www.googleapis.com/books/v1/volumes?q=+subject:${selectedValue}&orderBy=newest&maxResults=12&key=${apiKey}`;
-    
+
     // const bookUrl = new URL('https://www.googleapis.com/books/v1/volumes?q=+');
     // bookUrl.search = new URLSearchParams({
     //     subject: selectedValue,

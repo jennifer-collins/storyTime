@@ -292,7 +292,7 @@ ul {
 
 header {
   background-color: #bbd4ce;
-  height: 30vh;
+  height: 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -302,11 +302,17 @@ header {
 }
 header h1 {
   text-align: center;
+  margin: 10% 0 5% 0;
 }
 
-.formContainer {
-  background-color: #bbd4ce;
-  height: 30vh;
+form {
+  padding-bottom: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /* Add border to fieldset or form */
@@ -319,6 +325,8 @@ fieldset {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border-radius: 40px;
+  width: 60%;
 }
 fieldset button {
   margin: 10px 10px;
@@ -327,10 +335,13 @@ fieldset button {
   background-color: #264e70;
   color: white;
   font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: 400;
   text-align: center;
   cursor: pointer;
+  border-radius: 30px;
+  padding: 2%;
+  width: 30%;
 }
 fieldset button:hover, fieldset button:focus {
   background-color: #679186;
@@ -349,12 +360,20 @@ select {
   border: none;
   background-color: white;
   text-transform: lowercase;
-  font-size: 1rem;
+  font-size: 1.3rem;
   padding: 10px 10px;
   margin: 10px;
+  border-radius: 30px;
+  text-align: center;
+  padding: 2%;
+  width: 70%;
 }
 select option {
   text-transform: lowercase;
+}
+
+main {
+  background-color: #679186;
 }
 
 .bookResults {
@@ -370,6 +389,8 @@ select option {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-top: 5%;
+  min-height: 40vh;
 }
 .bookResults .bookListLi {
   display: -webkit-box;
@@ -382,19 +403,18 @@ select option {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: calc(33.3% - 20px);
   margin: 10px 10px;
   text-align: center;
-  height: 650px;
+  padding: 4%;
   background-color: #fdebd3;
+  border-radius: 30px;
 }
 .bookResults .bookListLi img {
   width: 250px;
-  margin-bottom: 50px;
-}
-.bookResults .bookListLi h2, .bookResults .bookListLi p {
-  width: 321px;
+  margin-bottom: 25px;
+  border-radius: 30px;
 }

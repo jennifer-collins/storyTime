@@ -1,6 +1,7 @@
-.formContainer {
-    background-color: $backgroundColorPrimary;
-    height: 30vh;
+form {
+    padding-bottom: 15%;
+    display: flex;
+    justify-content: center;
 }
 
 /* Add border to fieldset or form */
@@ -10,6 +11,9 @@ fieldset {
     border: none;
     display: flex;
     justify-content: center;
+    border-radius: 40px;
+    width: 60%;
+    
     button {
         margin: 10px 10px;
         padding: 10px 10px;
@@ -17,10 +21,13 @@ fieldset {
         background-color: $headingText;
         color: white;
         font-family: $paragraphFont;
-        font-size: 1rem;
+        font-size: 1.3rem;
         font-weight: 400;
         text-align: center;
         cursor: pointer;
+        border-radius: 30px;
+        padding: 2%;
+        width:30%;
         &:hover,
         &:focus {
             background-color: $backgroundColorSecondary;
@@ -38,9 +45,13 @@ select {
     border: none;
     background-color: white;
     text-transform: lowercase;
-    font-size: 1rem;
+    font-size: 1.3rem;
     padding: 10px 10px;
     margin: 10px;
+    border-radius: 30px;
+    text-align: center;
+    padding: 2%;
+    width: 70%;
     option {
         text-transform: lowercase;
     }
