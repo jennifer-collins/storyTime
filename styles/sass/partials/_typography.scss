@@ -7,15 +7,15 @@ html {
 }
 
 /* Typography */
-body {
-    font-family: $paragraphFont;
-    font-weight: 400;
-    font-size: 1rem;
-    color: $bodyFont;
-    /* Add line-height and letter-spacing */
-}
+// body {
+//     font-family: $paragraphFont;
+//     font-weight: 400;
+//     font-size: 1rem;
+//     color: $bodyFont;
+//     /* Add line-height and letter-spacing */
+// }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: $headerFont;
     color: $headingText;
     margin: 0;
@@ -28,7 +28,21 @@ h1 {
 }
 
 h2 {
+    font-size: 2rem;
+    padding: 2%;
+}
+
+h3 {
     font-weight: 300;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-transform: uppercase;
+    padding: 0 5% 0 5%;
+}
+
+h4, p {
+    font-family: $paragraphFont;
+    font-weight: 400;
+    font-size: 1rem;
+    color: $bodyFont;
+    /* Add line-height and letter-spacing */
 }

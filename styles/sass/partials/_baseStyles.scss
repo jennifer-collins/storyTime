@@ -17,3 +17,21 @@ img {
 ul {
     list-style: none;
 }
+
+footer {
+    background-color: $headingText;
+    p {
+        padding: 1% 0;
+        color: white;
+        text-align: center;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+        &:hover,
+        &:focus {
+            color: $backgroundColorPrimary;
+            text-decoration: underline;
+        }
+    }
+}

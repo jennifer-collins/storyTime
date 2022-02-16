@@ -244,15 +244,7 @@ html {
 }
 
 /* Typography */
-body {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  color: #171717;
-  /* Add line-height and letter-spacing */
-}
-
-h1, h2 {
+h1, h2, h3 {
   font-family: "Roboto Serif", sans-serif;
   color: #264e70;
   margin: 0;
@@ -265,9 +257,23 @@ h1 {
 }
 
 h2 {
+  font-size: 2rem;
+  padding: 2%;
+}
+
+h3 {
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-transform: uppercase;
+  padding: 0 5% 0 5%;
+}
+
+h4, p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #171717;
+  /* Add line-height and letter-spacing */
 }
 
 * {
@@ -288,6 +294,23 @@ img {
 
 ul {
   list-style: none;
+}
+
+footer {
+  background-color: #264e70;
+}
+footer p {
+  padding: 1% 0;
+  color: white;
+  text-align: center;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+footer a:hover, footer a:focus {
+  color: #bbd4ce;
+  text-decoration: underline;
 }
 
 header {
@@ -373,6 +396,11 @@ select option {
 }
 
 main {
+  background-color: #bbd4ce;
+  padding: 5% 0;
+}
+
+.newBackgroundColor {
   background-color: #679186;
 }
 
@@ -389,7 +417,6 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 5%;
   min-height: 40vh;
 }
 .bookResults .bookListLi {
@@ -406,12 +433,18 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: calc(33.3% - 20px);
-  margin: 10px 10px;
+  width: calc(33.3% - 4%);
+  margin: 2%;
   text-align: center;
   padding: 4%;
   background-color: #fdebd3;
   border-radius: 30px;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+.bookResults .bookListLi:hover, .bookResults .bookListLi:focus {
+  -webkit-transform: scale(110%);
+          transform: scale(110%);
 }
 .bookResults .bookListLi img {
   width: 250px;

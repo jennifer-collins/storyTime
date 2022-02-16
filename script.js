@@ -41,6 +41,8 @@ bookApp.getSubject = function () {
         event.preventDefault();
         bookApp.getBooks();
 
+        const mainSection = document.querySelector('main');
+        mainSection.classList.add('newBackgroundColor');
     })
 }
 // store the api call info
@@ -103,17 +105,29 @@ bookApp.displayBooks = function (dataFromApi) {
 
     const bookUl = document.querySelector('.bookResults');
     bookUl.innerHTML = '';
+    
+    const bookResultsHeadingContainer = document.querySelector('.headingContainer');
+    const bookResultsHeading = document.querySelector('h2');
+    
+    bookResultsHeading.innerHTML = '';
+    bookResultsHeading.textContent = "Here are your book suggestions:";
+    bookResultsHeadingContainer.appendChild(bookResultsHeading);
+    
     dataFromApi.forEach(function (bookObject) {
         const bookList = document.createElement('li');
         bookList.classList.add('bookListLi');
-        const title = document.createElement('h2');
-        const author = document.createElement('p');
+        const title = document.createElement('h3');
+        const author = document.createElement('h4');
 
         // Add image element when we get book cover data from API
         const image = document.createElement('img');
 
+        // const description = document.createElement('p');
+        // description.classList.add('bookDescription');
+
         title.textContent = bookObject.volumeInfo.title;
         author.textContent = bookObject.volumeInfo.authors;
+        // description.textContent = bookObject.volumeInfo.description;
 
         // note: this conditional statement returns either 2 authors or 1 and a genre
         // if (bookObject.volumeInfo.authors.length > 1) {
@@ -135,6 +149,7 @@ bookApp.displayBooks = function (dataFromApi) {
         bookList.appendChild(image);
         bookList.appendChild(title);
         bookList.appendChild(author);
+        // bookList.appendChild(description);
         bookUl.appendChild(bookList);
     })
 }
