@@ -31,6 +31,14 @@
 // FILTER (stretch goal)
 // filter data by language 
 
+
+//STRETCH GOAL
+    // Have the book description appear on click
+        // add an event listener to the ul, then target the div within the li's to have the book description appear on 'click'
+        // target the element we want to create, create variable to store description data, append data to the page
+    // create a div within the li's with a class of bookDescription
+        // hide the div with display: none; until the event listener of 'click' is activated
+
 // Namespace for App
 const bookApp = {};
 
@@ -57,17 +65,8 @@ bookApp.getBooks = function () {
     let selectedValue = selection.value
     const apiKey = 'AIzaSyBt9dJvG6Epw3nwxoLVa_AU_4CzUGOdWzc'
 
-    // const eraSelection = document.querySelector('#era');
-    // let selectedEra = eraSelection.value
-    // // console.log(selectedEra)
-
-    // console.log(selectedValue)
-
-    // const sortSelection = document.querySelector('#sort')
-    // let selectedSort = sortSelection.value
-
-
-    const bookUrl = `https://www.googleapis.com/books/v1/volumes?q=+subject:${selectedValue}&orderBy=newest&maxResults=12&key=${apiKey}`;
+    // Note: Didn't use the URl constructor below because it wouldn't allow us to leave the q parameter blank and search for subject
+    const bookUrl = `https://www.googleapis.com/books/v1/volumes?q=+subject:${selectedValue}&orderBy=newest&maxResults=12&langRestrict=en&key=${apiKey}`;
 
     // const bookUrl = new URL('https://www.googleapis.com/books/v1/volumes?q=+');
     // bookUrl.search = new URLSearchParams({
@@ -77,35 +76,27 @@ bookApp.getBooks = function () {
     //     key: apiKey
     // })
 
-
-    console.log(bookUrl);
-
+    // console.log(bookUrl);
 
     fetch(bookUrl)
         .then(function (response) {
             return response.json()
         })
         .then(function (jsonResponse) {
-            console.log(jsonResponse)
-            // console.log(`Here are your recommendations for books about ${selectedValue}:`);
-            // for (let i = 0; i < jsonResponse.works.length; i++) {
-            //     console.log(`${jsonResponse.works[i].title} by ${jsonResponse.works[i].authors[0].name}`)
-
-            // }
+            // console.log(jsonResponse)
             const worksData = jsonResponse.items;
             // console.log(worksData)
             bookApp.displayBooks(worksData);
-
-
-
         })
 }
+
 // adding book data to the page
 bookApp.displayBooks = function (dataFromApi) {
 
     const bookUl = document.querySelector('.bookResults');
     bookUl.innerHTML = '';
-    
+
+    // Book Result Header display and text creation -------
     const bookResultsHeadingContainer = document.querySelector('.headingContainer');
     const bookResultsHeading = document.querySelector('h2');
     
@@ -114,6 +105,7 @@ bookApp.displayBooks = function (dataFromApi) {
     bookResultsHeadingContainer.appendChild(bookResultsHeading);
     
     dataFromApi.forEach(function (bookObject) {
+        // List of Books display and text creation --------
         const bookList = document.createElement('li');
         bookList.classList.add('bookListLi');
         const title = document.createElement('h3');
@@ -122,12 +114,14 @@ bookApp.displayBooks = function (dataFromApi) {
         // Add image element when we get book cover data from API
         const image = document.createElement('img');
 
-        // const description = document.createElement('p');
-        // description.classList.add('bookDescription');
+        // Book Description display and text creation
+        const descriptionContainer = document.createElement('div')
+        const description = document.createElement('p');
+        descriptionContainer.classList.add('bookDescriptionContainer');
 
         title.textContent = bookObject.volumeInfo.title;
         author.textContent = bookObject.volumeInfo.authors;
-        // description.textContent = bookObject.volumeInfo.description;
+        description.textContent = bookObject.volumeInfo.description;
 
         // note: this conditional statement returns either 2 authors or 1 and a genre
         // if (bookObject.volumeInfo.authors.length > 1) {
@@ -137,19 +131,14 @@ bookApp.displayBooks = function (dataFromApi) {
         //     author.textContent = `${bookObject.volumeInfo.authors[0]}`;
         // }
 
-        // const idNumber = bookObject.cover_id;
-        // note: we need to make the id number dynamic
-        // const coverUrl = `https://covers.openlibrary.org/b/id/${idNumber}.jpg`
         image.src = bookObject.volumeInfo.imageLinks.smallThumbnail
         image.alt = `${bookObject.volumeInfo.title} cover`
-        // console.log(image.src);
-
-        // author.textContent = `${jsonResponse.works[i].authors[0].name}`;
 
         bookList.appendChild(image);
         bookList.appendChild(title);
         bookList.appendChild(author);
-        // bookList.appendChild(description);
+        bookList.appendChild(descriptionContainer)
+        descriptionContainer.appendChild(description);
         bookUl.appendChild(bookList);
     })
 }

@@ -26,10 +26,10 @@ main {
         background-color: $bookListBackground;
         border-radius: 30px;
         transition: 0.2s ease-in;
-        // position: relative;
-        // .bookDescription {
-        //     position: absolute;
-        // }
+        position: relative;
+        .bookDescription {
+            position: absolute;
+        }
         &:hover,
         &:focus {
             transform: scale(110%);

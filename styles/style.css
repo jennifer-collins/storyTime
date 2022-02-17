@@ -441,6 +441,10 @@ main {
   border-radius: 30px;
   -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
+  position: relative;
+}
+.bookResults .bookListLi .bookDescription {
+  position: absolute;
 }
 .bookResults .bookListLi:hover, .bookResults .bookListLi:focus {
   -webkit-transform: scale(110%);
