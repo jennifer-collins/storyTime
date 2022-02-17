@@ -33,11 +33,11 @@
 
 
 //STRETCH GOAL
-    // Have the book description appear on click
-        // add an event listener to the ul, then target the div within the li's to have the book description appear on 'click'
-        // target the element we want to create, create variable to store description data, append data to the page
-    // create a div within the li's with a class of bookDescription
-        // hide the div with display: none; until the event listener of 'click' is activated
+// Have the book description appear on click
+// add an event listener to the ul, then target the div within the li's to have the book description appear on 'click'
+// target the element we want to create, create variable to store description data, append data to the page
+// create a div within the li's with a class of bookDescription
+// hide the div with display: none; until the event listener of 'click' is activated
 
 // Namespace for App
 const bookApp = {};
@@ -85,7 +85,7 @@ bookApp.getBooks = function () {
         .then(function (jsonResponse) {
             // console.log(jsonResponse)
             const worksData = jsonResponse.items;
-            // console.log(worksData)
+            console.log(worksData)
             bookApp.displayBooks(worksData);
         })
 }
@@ -99,11 +99,11 @@ bookApp.displayBooks = function (dataFromApi) {
     // Book Result Header display and text creation -------
     const bookResultsHeadingContainer = document.querySelector('.headingContainer');
     const bookResultsHeading = document.querySelector('h2');
-    
+
     bookResultsHeading.innerHTML = '';
     bookResultsHeading.textContent = "Here are your book suggestions:";
     bookResultsHeadingContainer.appendChild(bookResultsHeading);
-    
+
     dataFromApi.forEach(function (bookObject) {
         // List of Books display and text creation --------
         const bookList = document.createElement('li');
@@ -117,11 +117,16 @@ bookApp.displayBooks = function (dataFromApi) {
         // Book Description display and text creation
         const descriptionContainer = document.createElement('div')
         const description = document.createElement('p');
+        const googleButton = document.createElement('a');
         descriptionContainer.classList.add('bookDescriptionContainer');
+        googleButton.classList.add('googleBookLink');
+
 
         title.textContent = bookObject.volumeInfo.title;
         author.textContent = bookObject.volumeInfo.authors;
         description.textContent = bookObject.volumeInfo.description;
+        googleButton.textContent = "Learn More"
+
 
         // note: this conditional statement returns either 2 authors or 1 and a genre
         // if (bookObject.volumeInfo.authors.length > 1) {
@@ -133,14 +138,32 @@ bookApp.displayBooks = function (dataFromApi) {
 
         image.src = bookObject.volumeInfo.imageLinks.smallThumbnail
         image.alt = `${bookObject.volumeInfo.title} cover`
+        googleButton.href = bookObject.volumeInfo.infoLink
+        googleButton.target = "_blank"
 
         bookList.appendChild(image);
         bookList.appendChild(title);
         bookList.appendChild(author);
         bookList.appendChild(descriptionContainer)
+        bookList.appendChild(googleButton)
         descriptionContainer.appendChild(description);
+
         bookUl.appendChild(bookList);
+
+        bookList.addEventListener('click', function () {
+            bookList.classList.toggle('fullWidth')
+            image.classList.toggle('hidden');
+            // title.classList.toggle('hidden');
+            author.classList.toggle('hidden');
+            description.classList.toggle('show');
+            googleButton.classList.toggle('show');
+            console.log(this)
+
+
+        })
     })
+
+
 }
 
 bookApp.init = function () {

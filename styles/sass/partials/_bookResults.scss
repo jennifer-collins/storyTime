@@ -27,12 +27,13 @@ main {
         border-radius: 30px;
         transition: 0.2s ease-in;
         position: relative;
+        cursor: pointer;
         .bookDescription {
             position: absolute;
         }
         &:hover,
         &:focus {
-            transform: scale(110%);
+            transform: scale(105%);
         }
         img {
             width: 250px;
@@ -42,3 +43,25 @@ main {
     }
 }
 
+.hidden {
+    position: absolute;
+    opacity: 0;
+
+}
+
+p.show,
+a.show {
+    position: static;
+    font-size: 0.8rem;
+    line-height: 25px;
+}
+
+p.show {
+    margin:2%;
+}
+
+.bookResults li.fullWidth {
+    width: 60%;
+    transition: width 0.9s ease;
+    justify-content: center;
+}

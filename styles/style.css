@@ -258,11 +258,11 @@ h1 {
 
 h2 {
   font-size: 2rem;
-  padding: 2%;
+  padding: 2% 2% 5% 2%;
 }
 
 h3 {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.3rem;
   text-transform: uppercase;
   padding: 0 5% 0 5%;
@@ -274,6 +274,13 @@ h4, p {
   font-size: 1rem;
   color: #171717;
   /* Add line-height and letter-spacing */
+}
+
+.bookDescriptionContainer p,
+.googleBookLink {
+  position: absolute;
+  left: -5000px;
+  top: -5000px;
 }
 
 * {
@@ -294,6 +301,29 @@ img {
 
 ul {
   list-style: none;
+}
+
+.googleBookLink {
+  text-decoration: none;
+  margin: 10px 10px;
+  padding: 10px 10px;
+  border: none;
+  background-color: #264e70;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 30px;
+  padding: 2%;
+  width: 50%;
+}
+.googleBookLink:hover, .googleBookLink:focus {
+  background-color: #679186;
+  color: white;
+  -webkit-box-shadow: 5px 5px 5px rgba(38, 78, 112, 0.5);
+          box-shadow: 5px 5px 5px rgba(38, 78, 112, 0.5);
 }
 
 footer {
@@ -442,16 +472,42 @@ main {
   -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
   position: relative;
+  cursor: pointer;
 }
 .bookResults .bookListLi .bookDescription {
   position: absolute;
 }
 .bookResults .bookListLi:hover, .bookResults .bookListLi:focus {
-  -webkit-transform: scale(110%);
-          transform: scale(110%);
+  -webkit-transform: scale(105%);
+          transform: scale(105%);
 }
 .bookResults .bookListLi img {
   width: 250px;
   margin-bottom: 25px;
   border-radius: 30px;
+}
+
+.hidden {
+  position: absolute;
+  opacity: 0;
+}
+
+p.show,
+a.show {
+  position: static;
+  font-size: 0.8rem;
+  line-height: 25px;
+}
+
+p.show {
+  margin: 2%;
+}
+
+.bookResults li.fullWidth {
+  width: 60%;
+  -webkit-transition: width 0.9s ease;
+  transition: width 0.9s ease;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
