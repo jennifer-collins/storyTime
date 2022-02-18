@@ -1,0 +1,41 @@
+form {
+    padding: 5% 0 10% 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Add border to fieldset or form */
+
+fieldset {
+    // background-color: $bookListBackground;
+    background-color: $fieldsetBackground;
+    border: none;
+    display: flex;
+    justify-content: center;
+    border-radius: 40px;
+    width: 60%;
+}
+
+select {
+    appearance: none;
+    font-family: $paragraphFont;
+    font-weight: 300;
+    color: $bodyFont;
+    border: none;
+    background-color: white;
+    text-transform: lowercase;
+    font-size: 1.3rem;
+    padding: 10px 10px;
+    margin: 10px;
+    border-radius: 30px;
+    text-align: center;
+    padding: 2%;
+    width: 70%;
+    background-image: url(../assets/book-open-solid.svg);
+    background-repeat: no-repeat, repeat;
+    background-position: 95% center;
+    background-size: 20px;
+    option {
+        text-transform: lowercase;
+    }
+}

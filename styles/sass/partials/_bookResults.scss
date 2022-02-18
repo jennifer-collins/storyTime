@@ -1,0 +1,68 @@
+main {
+    background-color: $backgroundColorPrimary;
+    padding: 5% 0;
+}
+
+.newBackgroundColor {
+    background-color: $backgroundColorSecondary;
+}
+
+.bookResults {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    // padding-top: 5%;
+    min-height: 20vh;
+    .bookListLi {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: calc(33.3% - 4%);
+        margin: 2%;
+        text-align: center;
+        padding: 4%;
+        background-color: $bookListBackground;
+        border-radius: 30px;
+        transition: 0.2s ease-in;
+        position: relative;
+        cursor: pointer;
+        .bookDescription {
+            position: absolute;
+        }
+        &:hover,
+        &:focus {
+            transform: scale(105%);
+        }
+        img {
+            width: 250px;
+            margin-bottom: 25px;
+            border-radius: 30px;
+        }
+    }
+}
+
+.hidden {
+    position: absolute;
+    opacity: 0;
+
+}
+
+p.show,
+a.show {
+    position: static;
+    font-size: 0.8rem;
+    line-height: 25px;
+    opacity: 1;
+}
+
+p.show {
+    margin:2%;
+}
+
+.bookResults li.fullWidth {
+    width: 60%;
+    transition: width 0.9s ease;
+    justify-content: center;
+}

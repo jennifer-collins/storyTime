@@ -1,0 +1,26 @@
+header {
+    background-color: $backgroundColorPrimary;
+    // height: 90vh;
+    display: flex;
+    align-items: center;
+    .headerContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5%;
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 5%;
+    }
+    .imgSpan {
+        text-align: center;
+        width: 90%;
+        img {
+        width: 25%;
+        // margin-top: 10%;
+        text-align: center;
+        }
+    }
+}

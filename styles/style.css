@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Roboto+Serif:wght@300;500;600&display=swap");
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -233,4 +234,427 @@ html {
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+/* Site Fonts */
+/* original Site Colors */
+/* Base Font Styles */
+html {
+  font-size: 125%;
+}
+
+/* Typography */
+h1, h3 {
+  color: #204051;
+}
+
+h1, h2, h3 {
+  font-family: "Roboto Serif", sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 3rem;
+  text-transform: lowercase;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 2rem;
+  padding: 2% 2% 5% 2%;
+  color: white;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 1.3rem;
+  padding: 0 5% 0 5%;
+}
+
+h4, p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #171717;
+  /* Add line-height and letter-spacing */
+}
+
+.bookDescriptionContainer p,
+.googleBookLink {
+  position: absolute;
+  opacity: 0;
+  left: -5000px;
+  top: -5000px;
+}
+
+.headingParagraph {
+  font-family: "Roboto Serif", sans-serif;
+  font-weight: 400;
+  color: #204051;
+  font-size: 1.3rem;
+  padding-bottom: 2%;
+  text-align: center;
+  width: 60%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  max-width: 1260px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+.googleBookLink {
+  margin: 10px 10px;
+  padding: 10px 10px;
+  border: none;
+  background-color: #204051;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 30px;
+  padding: 2%;
+  width: 30%;
+}
+
+button:hover, button:focus {
+  background-color: #cae8d5;
+  color: #204051;
+  -webkit-box-shadow: 5px 5px 5px rgba(32, 64, 81, 0.5);
+          box-shadow: 5px 5px 5px rgba(32, 64, 81, 0.5);
+}
+
+.googleBookLink {
+  text-decoration: none;
+  z-index: 1;
+}
+.googleBookLink:hover, .googleBookLink:focus {
+  background-color: #84a9ac;
+  -webkit-box-shadow: 5px 5px 5px rgba(32, 64, 81, 0.5);
+          box-shadow: 5px 5px 5px rgba(32, 64, 81, 0.5);
+}
+
+footer {
+  background-color: #84a9ac;
+}
+footer p {
+  padding: 1% 0;
+  color: #204051;
+  text-align: center;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+footer a:hover, footer a:focus {
+  color: #204051;
+  text-decoration: underline;
+}
+
+header {
+  background-color: #cae8d5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .headerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5%;
+}
+header h1 {
+  text-align: center;
+  margin-bottom: 5%;
+}
+header .imgSpan {
+  text-align: center;
+  width: 90%;
+}
+header .imgSpan img {
+  width: 25%;
+  text-align: center;
+}
+
+form {
+  padding: 5% 0 10% 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* Add border to fieldset or form */
+fieldset {
+  background-color: #84a9ac;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 40px;
+  width: 60%;
+}
+
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  color: #171717;
+  border: none;
+  background-color: white;
+  text-transform: lowercase;
+  font-size: 1.3rem;
+  padding: 10px 10px;
+  margin: 10px;
+  border-radius: 30px;
+  text-align: center;
+  padding: 2%;
+  width: 70%;
+  background-image: url(../assets/book-open-solid.svg);
+  background-repeat: no-repeat, repeat;
+  background-position: 95% center;
+  background-size: 20px;
+}
+select option {
+  text-transform: lowercase;
+}
+
+main {
+  background-color: #cae8d5;
+  padding: 5% 0;
+}
+
+.newBackgroundColor {
+  background-color: #204051;
+}
+
+.bookResults {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 20vh;
+}
+.bookResults .bookListLi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: calc(33.3% - 4%);
+  margin: 2%;
+  text-align: center;
+  padding: 4%;
+  background-color: #cae8d5;
+  border-radius: 30px;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+  position: relative;
+  cursor: pointer;
+}
+.bookResults .bookListLi .bookDescription {
+  position: absolute;
+}
+.bookResults .bookListLi:hover, .bookResults .bookListLi:focus {
+  -webkit-transform: scale(105%);
+          transform: scale(105%);
+}
+.bookResults .bookListLi img {
+  width: 250px;
+  margin-bottom: 25px;
+  border-radius: 30px;
+}
+
+.hidden {
+  position: absolute;
+  opacity: 0;
+}
+
+p.show,
+a.show {
+  position: static;
+  font-size: 0.8rem;
+  line-height: 25px;
+  opacity: 1;
+}
+
+p.show {
+  margin: 2%;
+}
+
+.bookResults li.fullWidth {
+  width: 60%;
+  -webkit-transition: width 0.9s ease;
+  transition: width 0.9s ease;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 1100px) {
+  fieldset {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  fieldset button,
+fieldset select {
+    width: 80%;
+  }
+
+  header .imgSpan img {
+    width: 35%;
+  }
+
+  .bookResults .bookListLi {
+    width: calc(50% - 6%);
+    margin: 3%;
+    padding: 3%;
+  }
+
+  .bookResults li.fullWidth {
+    width: 100%;
+  }
+}
+@media (max-width: 850px) {
+  .bookResults .bookListLi {
+    width: calc(100% - 6%);
+  }
+  .bookResults .bookListLi:hover, .bookResults .bookListLi:focus {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .bookResults .bookListLi h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2%;
+  }
+  .bookResults .bookListLi h4 {
+    margin-bottom: 2%;
+  }
+  .bookResults .bookListLi .googleBookLink {
+    padding: 3%;
+    width: 80%;
+  }
+}
+@media (max-width: 750px) {
+  fieldset,
+.headingParagraph {
+    width: 100%;
+  }
+
+  header .imgSpan img {
+    width: 50%;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .headingParagraph,
+select,
+fieldset button {
+    font-size: 1rem;
+  }
+
+  .bookResults .bookListLi {
+    margin: 3% 0 3% 0;
+    width: 90%;
+  }
+  .bookResults .bookListLi h3 {
+    font-size: 1.2rem;
+  }
+
+  .bookResults li.fullWidth h3 {
+    padding-top: 3%;
+  }
+}
+@media (max-width: 420px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  fieldset {
+    width: 90%;
+  }
+
+  header .imgSpan img {
+    width: 80%;
+    margin: 0;
+  }
+
+  select {
+    background-size: 18px;
+  }
+
+  .headingParagraph {
+    font-size: 0.9rem;
+  }
 }
