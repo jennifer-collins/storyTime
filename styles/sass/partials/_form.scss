@@ -7,7 +7,8 @@ form {
 /* Add border to fieldset or form */
 
 fieldset {
-    background-color: $bookListBackground;
+    // background-color: $bookListBackground;
+    background-color: $fieldsetBackground;
     border: none;
     display: flex;
     justify-content: center;

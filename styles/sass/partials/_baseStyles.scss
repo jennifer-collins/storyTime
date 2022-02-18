@@ -27,23 +27,33 @@ button,
         color: white;
         font-family: $paragraphFont;
         font-size: 1.3rem;
-        font-weight: 400;
+        font-weight: 500;
         text-align: center;
         cursor: pointer;
         border-radius: 30px;
         padding: 2%;
         width:30%;
-        &:hover,
-        &:focus {
-            background-color: $backgroundColorSecondary;
-            color: white;
+       
+    }
+button {
+     &:hover,
+    &:focus {
+            // background-color: $backgroundColorSecondary; 
+            background-color: $backgroundColorPrimary;
+            color: $headingText;
             box-shadow: 5px 5px 5px rgba($headingText, 0.5)
         }
-    }
-
+}
 .googleBookLink {
     text-decoration: none;
     z-index: 1;
+     &:hover,
+        &:focus {
+        
+            background-color: $fieldsetBackground;
+           
+            box-shadow: 5px 5px 5px rgba($headingText, 0.5)
+        }
 }
 
 footer {

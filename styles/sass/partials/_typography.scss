@@ -15,9 +15,12 @@ html {
 //     /* Add line-height and letter-spacing */
 // }
 
+h1, h3 {
+    color: $headingText;   
+}
+
 h1, h2, h3 {
     font-family: $headerFont;
-    color: $headingText;
     margin: 0;
 }
 
@@ -31,6 +34,7 @@ h2 {
     font-weight: 300;
     font-size: 2rem;
     padding: 2% 2% 5% 2%;
+    color: white;
 }
 
 h3 {
@@ -50,13 +54,14 @@ h4, p {
 .bookDescriptionContainer p,
 .googleBookLink {
     position: absolute;
+    opacity: 0;
     left: -5000px;
     top: -5000px;
 }
 
 .headingParagraph {
     font-family: $headerFont;
-    font-weight: 300;
+    font-weight: 400;
     color: $headingText;
     font-size: 1.3rem;
     padding-bottom: 5%;

@@ -2,13 +2,20 @@
 $headerFont: 'Roboto Serif', sans-serif;
 $paragraphFont: 'Montserrat', sans-serif;
 
-/* Site Colors */
+/* original Site Colors */
 
 $bodyFont: #171717;
-$headingText: #264e70;
-$bookListBackground: #fdebd3;
-// $bookListBackground: #fac950;
-$backgroundColorPrimary: #bbd4ce;
-$backgroundColorSecondary: #679186;
-// $backgroundColorSecondary: #08736d;
-$accentColor: #f9b4ab;
+// $headingText: #264e70;
+// $bookListBackground: #fdebd3;
+// $backgroundColorPrimary: #bbd4ce;
+// $backgroundColorSecondary: #679186;
+// $accentColor: #f9b4ab;
+
+// new colours
+
+$backgroundColorPrimary: #cae8d5;
+$backgroundColorSecondary: #204051;
+$bookListBackground: #cae8d5;
+$fieldsetBackground: #84a9ac;
+
+$headingText: #204051;

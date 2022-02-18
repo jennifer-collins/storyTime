@@ -1,6 +1,6 @@
 header {
     background-color: $backgroundColorPrimary;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     .headerContainer {
@@ -18,7 +18,7 @@ header {
         width: 100%;
         img {
         width: 25%;
-        margin-top: 15%;
+        margin-top: 10%;
         text-align: center;
         }
     }

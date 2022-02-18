@@ -237,16 +237,19 @@ html {
 }
 
 /* Site Fonts */
-/* Site Colors */
+/* original Site Colors */
 /* Base Font Styles */
 html {
   font-size: 125%;
 }
 
 /* Typography */
+h1, h3 {
+  color: #204051;
+}
+
 h1, h2, h3 {
   font-family: "Roboto Serif", sans-serif;
-  color: #264e70;
   margin: 0;
 }
 
@@ -260,6 +263,7 @@ h2 {
   font-weight: 300;
   font-size: 2rem;
   padding: 2% 2% 5% 2%;
+  color: white;
 }
 
 h3 {
@@ -279,14 +283,15 @@ h4, p {
 .bookDescriptionContainer p,
 .googleBookLink {
   position: absolute;
+  opacity: 0;
   left: -5000px;
   top: -5000px;
 }
 
 .headingParagraph {
   font-family: "Roboto Serif", sans-serif;
-  font-weight: 300;
-  color: #264e70;
+  font-weight: 400;
+  color: #204051;
   font-size: 1.3rem;
   padding-bottom: 5%;
   text-align: center;
@@ -318,33 +323,37 @@ button,
   margin: 10px 10px;
   padding: 10px 10px;
   border: none;
-  background-color: #264e70;
+  background-color: #204051;
   color: white;
   font-family: "Montserrat", sans-serif;
   font-size: 1.3rem;
-  font-weight: 400;
+  font-weight: 500;
   text-align: center;
   cursor: pointer;
   border-radius: 30px;
   padding: 2%;
   width: 30%;
 }
-button:hover, button:focus,
-.googleBookLink:hover,
-.googleBookLink:focus {
-  background-color: #679186;
-  color: white;
-  -webkit-box-shadow: 5px 5px 5px rgba(38, 78, 112, 0.5);
-          box-shadow: 5px 5px 5px rgba(38, 78, 112, 0.5);
+
+button:hover, button:focus {
+  background-color: #cae8d5;
+  color: #204051;
+  -webkit-box-shadow: 5px 5px 5px rgba(32, 64, 81, 0.5);
+          box-shadow: 5px 5px 5px rgba(32, 64, 81, 0.5);
 }
 
 .googleBookLink {
   text-decoration: none;
   z-index: 1;
 }
+.googleBookLink:hover, .googleBookLink:focus {
+  background-color: #84a9ac;
+  -webkit-box-shadow: 5px 5px 5px rgba(32, 64, 81, 0.5);
+          box-shadow: 5px 5px 5px rgba(32, 64, 81, 0.5);
+}
 
 footer {
-  background-color: #264e70;
+  background-color: #204051;
 }
 footer p {
   padding: 1% 0;
@@ -356,13 +365,13 @@ footer a {
   color: white;
 }
 footer a:hover, footer a:focus {
-  color: #bbd4ce;
+  color: #cae8d5;
   text-decoration: underline;
 }
 
 header {
-  background-color: #bbd4ce;
-  height: 90vh;
+  background-color: #cae8d5;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -395,7 +404,7 @@ header .imgSpan {
 }
 header .imgSpan img {
   width: 25%;
-  margin-top: 15%;
+  margin-top: 10%;
   text-align: center;
 }
 
@@ -411,7 +420,7 @@ form {
 
 /* Add border to fieldset or form */
 fieldset {
-  background-color: #fdebd3;
+  background-color: #84a9ac;
   border: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -450,12 +459,12 @@ select option {
 }
 
 main {
-  background-color: #bbd4ce;
+  background-color: #cae8d5;
   padding: 5% 0;
 }
 
 .newBackgroundColor {
-  background-color: #679186;
+  background-color: #204051;
 }
 
 .bookResults {
@@ -491,7 +500,7 @@ main {
   margin: 2%;
   text-align: center;
   padding: 4%;
-  background-color: #fdebd3;
+  background-color: #cae8d5;
   border-radius: 30px;
   -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
@@ -521,6 +530,7 @@ a.show {
   position: static;
   font-size: 0.8rem;
   line-height: 25px;
+  opacity: 1;
 }
 
 p.show {
@@ -554,6 +564,36 @@ fieldset select {
   header .imgSpan img {
     width: 35%;
   }
+
+  .bookResults .bookListLi {
+    width: calc(50% - 6%);
+    margin: 3%;
+    padding: 3%;
+  }
+
+  .bookResults li.fullWidth {
+    width: 100%;
+  }
+}
+@media (max-width: 850px) {
+  .bookResults .bookListLi {
+    width: calc(100% - 6%);
+  }
+  .bookResults .bookListLi:hover, .bookResults .bookListLi:focus {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .bookResults .bookListLi h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2%;
+  }
+  .bookResults .bookListLi h4 {
+    margin-bottom: 2%;
+  }
+  .bookResults .bookListLi .googleBookLink {
+    padding: 3%;
+    width: 80%;
+  }
 }
 @media (max-width: 750px) {
   fieldset,
@@ -563,6 +603,10 @@ fieldset select {
 
   header .imgSpan img {
     width: 50%;
+  }
+
+  h2 {
+    font-size: 1.8rem;
   }
 }
 @media (max-width: 500px) {
@@ -574,6 +618,11 @@ fieldset select {
 select,
 fieldset button {
     font-size: 1rem;
+  }
+
+  .bookResults .bookListLi {
+    margin: 3% 0 3% 0;
+    width: 90%;
   }
 }
 @media (max-width: 420px) {

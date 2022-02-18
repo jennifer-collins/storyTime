@@ -158,7 +158,7 @@ bookApp.displayBooks = function (dataFromApi) {
             author.classList.toggle('hidden');
             description.classList.toggle('show');
             googleButton.classList.toggle('show');
-            console.log(this)
+
 
 
         })
