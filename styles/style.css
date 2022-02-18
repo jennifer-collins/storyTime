@@ -283,6 +283,15 @@ h4, p {
   top: -5000px;
 }
 
+.headingParagraph {
+  font-family: "Roboto Serif", sans-serif;
+  font-weight: 300;
+  color: #264e70;
+  font-size: 1.3rem;
+  padding-bottom: 5%;
+  text-align: center;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -303,8 +312,8 @@ ul {
   list-style: none;
 }
 
+button,
 .googleBookLink {
-  text-decoration: none;
   margin: 10px 10px;
   padding: 10px 10px;
   border: none;
@@ -317,13 +326,20 @@ ul {
   cursor: pointer;
   border-radius: 30px;
   padding: 2%;
-  width: 50%;
+  width: 30%;
 }
-.googleBookLink:hover, .googleBookLink:focus {
+button:hover, button:focus,
+.googleBookLink:hover,
+.googleBookLink:focus {
   background-color: #679186;
   color: white;
   -webkit-box-shadow: 5px 5px 5px rgba(38, 78, 112, 0.5);
           box-shadow: 5px 5px 5px rgba(38, 78, 112, 0.5);
+}
+
+.googleBookLink {
+  text-decoration: none;
+  z-index: 1;
 }
 
 footer {
@@ -372,12 +388,13 @@ header h1 {
   text-align: center;
   margin-bottom: 5%;
 }
-header span {
+header .imgSpan {
   text-align: center;
+  width: 100%;
 }
-header span img {
-  width: 70%;
-  margin-top: 30%;
+header .imgSpan img {
+  width: 25%;
+  margin-top: 5%;
   text-align: center;
 }
 
@@ -403,27 +420,6 @@ fieldset {
           justify-content: center;
   border-radius: 40px;
   width: 60%;
-}
-fieldset button {
-  margin: 10px 10px;
-  padding: 10px 10px;
-  border: none;
-  background-color: #264e70;
-  color: white;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.3rem;
-  font-weight: 400;
-  text-align: center;
-  cursor: pointer;
-  border-radius: 30px;
-  padding: 2%;
-  width: 30%;
-}
-fieldset button:hover, fieldset button:focus {
-  background-color: #679186;
-  color: white;
-  -webkit-box-shadow: 5px 5px 5px rgba(38, 78, 112, 0.5);
-          box-shadow: 5px 5px 5px rgba(38, 78, 112, 0.5);
 }
 
 select {

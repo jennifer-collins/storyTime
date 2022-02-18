@@ -11,14 +11,14 @@ header {
     }
     h1 {
         text-align: center;
-        margin-bottom: 5%
+        margin-bottom: 5%;
     }
-    
-    span {
+    .imgSpan {
         text-align: center;
+        width: 100%;
         img {
-        width:70%;
-        margin-top: 30%;
+        width: 25%;
+        margin-top: 5%;
         text-align: center;
         }
     }

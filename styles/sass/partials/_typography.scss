@@ -53,3 +53,12 @@ h4, p {
     left: -5000px;
     top: -5000px;
 }
+
+.headingParagraph {
+    font-family: $headerFont;
+    font-weight: 300;
+    color: $headingText;
+    font-size: 1.3rem;
+    padding-bottom: 5%;
+    text-align: center;
+}

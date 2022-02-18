@@ -18,28 +18,32 @@ ul {
     list-style: none;
 }
 
+button,
 .googleBookLink {
-    text-decoration: none;
-    margin: 10px 10px;
-    padding: 10px 10px;
-    border: none;
-    background-color: $headingText;
-    color: white;
-    font-family: $paragraphFont;
-    font-size: 1.3rem;
-    font-weight: 400;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 30px;
-    padding: 2%;
-    width:50%;
-    &:hover,
-    &:focus {
-        background-color: $backgroundColorSecondary;
+        margin: 10px 10px;
+        padding: 10px 10px;
+        border: none;
+        background-color: $headingText;
         color: white;
-        box-shadow: 5px 5px 5px rgba($headingText, 0.5)
+        font-family: $paragraphFont;
+        font-size: 1.3rem;
+        font-weight: 400;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 30px;
+        padding: 2%;
+        width:30%;
+        &:hover,
+        &:focus {
+            background-color: $backgroundColorSecondary;
+            color: white;
+            box-shadow: 5px 5px 5px rgba($headingText, 0.5)
+        }
     }
 
+.googleBookLink {
+    text-decoration: none;
+    z-index: 1;
 }
 
 footer {

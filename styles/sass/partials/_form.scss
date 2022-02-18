@@ -13,28 +13,6 @@ fieldset {
     justify-content: center;
     border-radius: 40px;
     width: 60%;
-    
-    button {
-        margin: 10px 10px;
-        padding: 10px 10px;
-        border: none;
-        background-color: $headingText;
-        color: white;
-        font-family: $paragraphFont;
-        font-size: 1.3rem;
-        font-weight: 400;
-        text-align: center;
-        cursor: pointer;
-        border-radius: 30px;
-        padding: 2%;
-        width:30%;
-        &:hover,
-        &:focus {
-            background-color: $backgroundColorSecondary;
-            color: white;
-            box-shadow: 5px 5px 5px rgba($headingText, 0.5)
-        }
-    }
 }
 
 select {
@@ -53,10 +31,9 @@ select {
     padding: 2%;
     width: 70%;
     background-image: url(../assets/book-open-solid.svg);
-  background-repeat: no-repeat, repeat;
-  background-position: 95% center;
-  background-size: 20px;
-  
+    background-repeat: no-repeat, repeat;
+    background-position: 95% center;
+    background-size: 20px;
     option {
         text-transform: lowercase;
     }

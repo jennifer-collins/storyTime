@@ -32,7 +32,7 @@
 // filter data by language 
 
 
-//STRETCH GOAL
+// BOOK DESCRIPTION (STRETCH GOAL)
 // Have the book description appear on click
 // add an event listener to the ul, then target the div within the li's to have the book description appear on 'click'
 // target the element we want to create, create variable to store description data, append data to the page
@@ -120,7 +120,6 @@ bookApp.displayBooks = function (dataFromApi) {
         const googleButton = document.createElement('a');
         descriptionContainer.classList.add('bookDescriptionContainer');
         googleButton.classList.add('googleBookLink');
-
 
         title.textContent = bookObject.volumeInfo.title;
         author.textContent = bookObject.volumeInfo.authors;
