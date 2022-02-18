@@ -52,6 +52,11 @@ select {
     text-align: center;
     padding: 2%;
     width: 70%;
+    background-image: url(../assets/book-open-solid.svg);
+  background-repeat: no-repeat, repeat;
+  background-position: 95% center;
+  background-size: 20px;
+  
     option {
         text-transform: lowercase;
     }

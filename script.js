@@ -101,7 +101,7 @@ bookApp.displayBooks = function (dataFromApi) {
     const bookResultsHeading = document.querySelector('h2');
 
     bookResultsHeading.innerHTML = '';
-    bookResultsHeading.textContent = "Here are your book suggestions:";
+    bookResultsHeading.textContent = "here are your book suggestions:";
     bookResultsHeadingContainer.appendChild(bookResultsHeading);
 
     dataFromApi.forEach(function (bookObject) {
