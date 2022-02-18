@@ -64,6 +64,10 @@
     h1 {
         font-size: 2.8rem;
     }
+    h2 {
+        font-size: 1.4rem;
+        text-align: center;
+    }
     .headingParagraph,
     select,
     fieldset button {
@@ -72,6 +76,12 @@
     .bookResults .bookListLi {
         margin: 3% 0 3% 0;
         width:90%;
+        h3 {
+            font-size: 1.2rem;
+        }
+    }
+    .bookResults li.fullWidth h3 {
+        padding-top: 3%;
     }
 }
 
@@ -88,5 +98,9 @@
     }
     select {
         background-size: 18px ;
+    }
+
+    .headingParagraph {
+        font-size: 0.9rem;
     }
 }

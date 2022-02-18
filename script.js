@@ -141,6 +141,7 @@ bookApp.displayBooks = function (dataFromApi) {
         image.alt = `${bookObject.volumeInfo.title} cover`
         googleButton.href = bookObject.volumeInfo.infoLink
         googleButton.target = "_blank"
+        googleButton.rel = "noopener noreferrer";
 
         bookList.appendChild(image);
         bookList.appendChild(title);

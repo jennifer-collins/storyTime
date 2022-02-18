@@ -293,7 +293,7 @@ h4, p {
   font-weight: 400;
   color: #204051;
   font-size: 1.3rem;
-  padding-bottom: 5%;
+  padding-bottom: 2%;
   text-align: center;
   width: 60%;
 }
@@ -353,11 +353,11 @@ button:hover, button:focus {
 }
 
 footer {
-  background-color: #204051;
+  background-color: #84a9ac;
 }
 footer p {
   padding: 1% 0;
-  color: white;
+  color: #204051;
   text-align: center;
 }
 footer a {
@@ -365,13 +365,12 @@ footer a {
   color: white;
 }
 footer a:hover, footer a:focus {
-  color: #cae8d5;
+  color: #204051;
   text-decoration: underline;
 }
 
 header {
   background-color: #cae8d5;
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -393,6 +392,7 @@ header .headerContainer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 5%;
 }
 header h1 {
   text-align: center;
@@ -400,16 +400,15 @@ header h1 {
 }
 header .imgSpan {
   text-align: center;
-  width: 100%;
+  width: 90%;
 }
 header .imgSpan img {
   width: 25%;
-  margin-top: 10%;
   text-align: center;
 }
 
 form {
-  padding-bottom: 15%;
+  padding: 5% 0 10% 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -480,7 +479,7 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 40vh;
+  min-height: 20vh;
 }
 .bookResults .bookListLi {
   display: -webkit-box;
@@ -614,6 +613,11 @@ fieldset select {
     font-size: 2.8rem;
   }
 
+  h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
   .headingParagraph,
 select,
 fieldset button {
@@ -623,6 +627,13 @@ fieldset button {
   .bookResults .bookListLi {
     margin: 3% 0 3% 0;
     width: 90%;
+  }
+  .bookResults .bookListLi h3 {
+    font-size: 1.2rem;
+  }
+
+  .bookResults li.fullWidth h3 {
+    padding-top: 3%;
   }
 }
 @media (max-width: 420px) {
@@ -641,5 +652,9 @@ fieldset button {
 
   select {
     background-size: 18px;
+  }
+
+  .headingParagraph {
+    font-size: 0.9rem;
   }
 }
