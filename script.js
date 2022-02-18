@@ -44,6 +44,7 @@ const bookApp = {};
 
 const form = document.querySelector('form');
 
+
 bookApp.getSubject = function () {
     form.addEventListener('submit', function (event) {
         event.preventDefault();
@@ -51,6 +52,8 @@ bookApp.getSubject = function () {
 
         const mainSection = document.querySelector('main');
         mainSection.classList.add('newBackgroundColor');
+
+
     })
 }
 // store the api call info
@@ -64,7 +67,6 @@ bookApp.getBooks = function () {
     const selection = document.querySelector('#bookSubject');
     let selectedValue = selection.value
     const apiKey = 'AIzaSyBt9dJvG6Epw3nwxoLVa_AU_4CzUGOdWzc'
-
     // Note: Didn't use the URl constructor below because it wouldn't allow us to leave the q parameter blank and search for subject
     const bookUrl = `https://www.googleapis.com/books/v1/volumes?q=+subject:${selectedValue}&orderBy=newest&maxResults=12&langRestrict=en&key=${apiKey}`;
 
@@ -76,7 +78,7 @@ bookApp.getBooks = function () {
     //     key: apiKey
     // })
 
-    // console.log(bookUrl);
+    console.log(bookUrl);
 
     fetch(bookUrl)
         .then(function (response) {
@@ -135,7 +137,7 @@ bookApp.displayBooks = function (dataFromApi) {
         //     author.textContent = `${bookObject.volumeInfo.authors[0]}`;
         // }
 
-        image.src = bookObject.volumeInfo.imageLinks.smallThumbnail
+        image.src = bookObject.volumeInfo.imageLinks.thumbnail
         image.alt = `${bookObject.volumeInfo.title} cover`
         googleButton.href = bookObject.volumeInfo.infoLink
         googleButton.target = "_blank"
