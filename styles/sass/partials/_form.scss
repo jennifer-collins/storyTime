@@ -4,10 +4,8 @@ form {
     justify-content: center;
 }
 
-/* Add border to fieldset or form */
 
 fieldset {
-    // background-color: $bookListBackground;
     background-color: $fieldsetBackground;
     border: none;
     display: flex;

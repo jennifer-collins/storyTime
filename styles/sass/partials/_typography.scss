@@ -7,22 +7,16 @@ html {
 }
 
 /* Typography */
-// body {
-//     font-family: $paragraphFont;
-//     font-weight: 400;
-//     font-size: 1rem;
-//     color: $bodyFont;
-//     /* Add line-height and letter-spacing */
-// }
-
-h1, h3 {
-    color: $headingText;   
-}
 
 h1, h2, h3 {
     font-family: $headerFont;
     margin: 0;
 }
+
+h1, h3 {
+    color: $headingText;   
+}
+
 
 h1 {
     font-weight: 300;
@@ -48,7 +42,6 @@ h4, p {
     font-weight: 400;
     font-size: 1rem;
     color: $bodyFont;
-    /* Add line-height and letter-spacing */
 }
 
 .bookDescriptionContainer p,

@@ -44,7 +44,6 @@ const bookApp = {};
 
 const form = document.querySelector('form');
 
-
 bookApp.getSubject = function () {
     form.addEventListener('submit', function (event) {
         event.preventDefault();
@@ -52,12 +51,8 @@ bookApp.getSubject = function () {
 
         const mainSection = document.querySelector('main');
         mainSection.classList.add('newBackgroundColor');
-
-
     })
 }
-// store the api call info
-
 
 
 // getting data from api
@@ -70,24 +65,14 @@ bookApp.getBooks = function () {
     // Note: Didn't use the URl constructor below because it wouldn't allow us to leave the q parameter blank and search for subject
     const bookUrl = `https://www.googleapis.com/books/v1/volumes?q=+subject:${selectedValue}&orderBy=newest&maxResults=12&langRestrict=en&key=${apiKey}`;
 
-    // const bookUrl = new URL('https://www.googleapis.com/books/v1/volumes?q=+');
-    // bookUrl.search = new URLSearchParams({
-    //     subject: selectedValue,
-    //     orderBy: 'newest',
-    //     maxResults: 12,
-    //     key: apiKey
-    // })
 
-    console.log(bookUrl);
 
     fetch(bookUrl)
         .then(function (response) {
             return response.json()
         })
         .then(function (jsonResponse) {
-            // console.log(jsonResponse)
             const worksData = jsonResponse.items;
-            console.log(worksData)
             bookApp.displayBooks(worksData);
         })
 }
@@ -129,15 +114,7 @@ bookApp.displayBooks = function (dataFromApi) {
         googleButton.textContent = "Learn More"
 
 
-        // note: this conditional statement returns either 2 authors or 1 and a genre
-        // if (bookObject.volumeInfo.authors.length > 1) {
-        //     // console.log(bookObject.volumeInfo.authors.length);
-        //     author.textContent = `${bookObject.volumeInfo.authors[0]} and ${bookObject.volumeInfo.authors[1]}`
-        // } else {
-        //     author.textContent = `${bookObject.volumeInfo.authors[0]}`;
-        // }
-
-        image.src = bookObject.volumeInfo.imageLinks.thumbnail
+        image.src = bookObject.volumeInfo.imageLinks.thumbnail;
         image.alt = `${bookObject.volumeInfo.title} cover`
         googleButton.href = bookObject.volumeInfo.infoLink
         googleButton.target = "_blank"
@@ -149,30 +126,21 @@ bookApp.displayBooks = function (dataFromApi) {
         bookList.appendChild(descriptionContainer)
         bookList.appendChild(googleButton)
         descriptionContainer.appendChild(description);
-
         bookUl.appendChild(bookList);
 
         bookList.addEventListener('click', function () {
             bookList.classList.toggle('fullWidth')
             image.classList.toggle('hidden');
-            // title.classList.toggle('hidden');
             author.classList.toggle('hidden');
             description.classList.toggle('show');
             googleButton.classList.toggle('show');
-
-
-
         })
     })
-
-
 }
 
 bookApp.init = function () {
     bookApp.getSubject()
 }
-
-
 
 
 bookApp.init()

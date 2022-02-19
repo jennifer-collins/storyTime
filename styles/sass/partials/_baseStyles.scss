@@ -36,9 +36,8 @@ button,
        
     }
 button {
-     &:hover,
+    &:hover,
     &:focus {
-            // background-color: $backgroundColorSecondary; 
             background-color: $backgroundColorPrimary;
             color: $headingText;
             box-shadow: 5px 5px 5px rgba($headingText, 0.5)
@@ -47,11 +46,9 @@ button {
 .googleBookLink {
     text-decoration: none;
     z-index: 1;
-     &:hover,
+        &:hover,
         &:focus {
-        
             background-color: $fieldsetBackground;
-           
             box-shadow: 5px 5px 5px rgba($headingText, 0.5)
         }
 }
