@@ -679,6 +679,10 @@ fieldset button {
   .bookResults li.fullWidth h3 {
     padding-top: 3%;
   }
+
+  footer p {
+    padding: 5% 0;
+  }
 }
 @media (max-width: 420px) {
   h1 {
