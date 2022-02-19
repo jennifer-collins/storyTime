@@ -50,7 +50,8 @@ button {
         &:focus {
             background-color: $fieldsetBackground;
             box-shadow: 5px 5px 5px rgba($headingText, 0.5);
-            outline: 3px solid $headingText;
+            border: 3px solid $headingText;
+            outline: none;
         }
 }
 
