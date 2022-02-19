@@ -257,6 +257,14 @@ h1 {
   font-weight: 300;
   font-size: 3rem;
   text-transform: lowercase;
+  -webkit-animation: typing 1.5s steps(30), blink-caret 0.9s step-end infinite;
+          animation: typing 1.5s steps(30), blink-caret 0.9s step-end infinite;
+  overflow: hidden;
+  border-right: 0.2rem solid #204051;
+  white-space: nowrap;
+  margin: 0 auto;
+  width: 100%;
+  letter-spacing: 0.3rem;
 }
 
 h2 {
@@ -297,6 +305,39 @@ h4, p {
   width: 60%;
 }
 
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@-webkit-keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #204051;
+  }
+}
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #204051;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -537,8 +578,8 @@ p.show {
 
 .bookResults li.fullWidth {
   width: 60%;
-  -webkit-transition: width 0.9s ease;
-  transition: width 0.9s ease;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -613,7 +654,7 @@ fieldset select {
 }
 @media (max-width: 500px) {
   h1 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
   }
 
   h2 {
@@ -641,7 +682,7 @@ fieldset button {
 }
 @media (max-width: 420px) {
   h1 {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   fieldset {

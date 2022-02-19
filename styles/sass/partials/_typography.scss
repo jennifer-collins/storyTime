@@ -22,6 +22,13 @@ h1 {
     font-weight: 300;
     font-size: 3rem;
     text-transform: lowercase;
+    animation: typing 1.5s steps(30), blink-caret .9s step-end infinite;
+    overflow: hidden; 
+    border-right: 0.2rem solid $headingText; 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    width: 100%;
+    letter-spacing: 0.3rem;
 }
 
 h2 {
@@ -29,6 +36,7 @@ h2 {
     font-size: 2rem;
     padding: 2% 2% 5% 2%;
     color: white;
+    
 }
 
 h3 {
@@ -61,3 +69,14 @@ h4, p {
     text-align: center;
     width:60%;
 }
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: $headingText; }
+}
+
