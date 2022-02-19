@@ -606,6 +606,10 @@ fieldset select {
   h2 {
     font-size: 1.8rem;
   }
+
+  .bookResults .bookListLi {
+    padding: 5% 3% 5% 3%;
+  }
 }
 @media (max-width: 500px) {
   h1 {
@@ -643,6 +647,9 @@ fieldset button {
   fieldset {
     width: 90%;
   }
+  fieldset button, fieldset select {
+    font-size: 0.8rem;
+  }
 
   header .imgSpan img {
     width: 80%;
@@ -655,5 +662,9 @@ fieldset button {
 
   .headingParagraph {
     font-size: 0.9rem;
+  }
+
+  footer p {
+    font-size: 0.8rem;
   }
 }

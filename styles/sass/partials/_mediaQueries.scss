@@ -53,6 +53,9 @@
     h2 {
         font-size: 1.8rem;
     }
+    .bookResults .bookListLi {
+        padding: 5% 3% 5% 3%;
+    }
 }
 
 @media (max-width: 500px) {
@@ -86,6 +89,9 @@
     }
     fieldset {
         width:90%;
+        button, select {
+            font-size: 0.8rem;
+        }
     }
     header .imgSpan img {
         width: 80%;
@@ -97,5 +103,9 @@
 
     .headingParagraph {
         font-size: 0.9rem;
+    }
+
+    footer p {
+        font-size: 0.8rem;
     }
 }
