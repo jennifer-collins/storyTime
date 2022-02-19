@@ -45,6 +45,10 @@ h3 {
     padding: 0 5% 0 5%;
 }
 
+h4 {
+    padding-top: 2%;
+}
+
 h4, p {
     font-family: $paragraphFont;
     font-weight: 400;
@@ -52,12 +56,16 @@ h4, p {
     color: $bodyFont;
 }
 
-.bookDescriptionContainer p,
-.googleBookLink {
+.bookDescriptionContainer p {
     position: absolute;
     opacity: 0;
     left: -5000px;
     top: -5000px;
+}
+
+.googleBookLink {
+    position: absolute;
+    opacity: 0;
 }
 
 .headingParagraph {

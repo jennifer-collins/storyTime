@@ -24,7 +24,7 @@
 
                 <p class="headingParagraph">Not sure what to read?
                     <span>
-                        <p class="headingParagraph">Choose a subject below to get a list of book suggestions.</p>
+                        <p class="headingParagraph">Choose a subject below to get a list of the latest book suggestions from the <a href="https://developers.google.com/books">Google Books API</a></p>
                     </span>
                 </p>
             </div>
@@ -37,6 +37,7 @@
                         <option value="initial" disabled="disabled" selected>Pick a topic</option>
                         <option value="art">Art</option>
                         <option value="biographies">Biographies</option>
+                        <option value="picture_book">Children's Books</option>
                         <option value="comedy">Comedy</option>
                         <option value="cooking">Cooking</option>
                         <option value="fantasy">Fantasy</option>
@@ -55,7 +56,7 @@
                         <option value="sports">Sports</option>
                         <option value="travel">Travel</option>
                     </select>
-                    <button>get books</button>
+                    <button id="submitButton">get books</button>
                 </fieldset>
             </form>
         </div><!-- END .wrapper -->
@@ -66,7 +67,7 @@
             <div class="wrapper">
                 <div class="headingContainer" id="results">
                     <h2></h2>
-                </div>
+                </div><!-- END .headContainer -->
                 <ul class="bookResults">
                     <!-- add contents with js -->
                 </ul>
@@ -77,8 +78,8 @@
 
     <footer>
         <div class="wrapper">
-            <p>Created at <a href="junocollege.com">Juno College</a> By Seanna and Jenn</p>
-        </div>
+            <p>Created at <a href="junocollege.com">Juno College</a> By <a href="https://github.com/seannastewart" target="_blank" rel="noopener noreferrer">Seanna Stewart</a> and <a href="https://github.com/jennifer-collins" target="_blank" rel="noopener noreferrer">Jenn Collins</a></p>
+        </div><!-- END .wrapper -->
     </footer>
 
     <script src="script.js"></script>

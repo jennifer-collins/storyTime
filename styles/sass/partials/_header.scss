@@ -3,6 +3,15 @@ header {
     max-height: 100vh;
     display: flex;
     align-items: center;
+    a {
+        text-decoration: none;
+        color: $headingText;
+        &:hover,
+        &:focus {
+            border-bottom: 2px dashed $headingText;
+            padding-bottom: 0.05%;
+        }
+    }
     .headerContainer {
         display: flex;
         flex-direction: column;

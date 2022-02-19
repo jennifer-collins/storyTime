@@ -36,4 +36,8 @@ select {
     option {
         text-transform: lowercase;
     }
+    &:hover,
+    &:focus {
+        outline: 3px solid $headingText;
+    }
 }

@@ -280,6 +280,10 @@ h3 {
   padding: 0 5% 0 5%;
 }
 
+h4 {
+  padding-top: 2%;
+}
+
 h4, p {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -287,12 +291,16 @@ h4, p {
   color: #171717;
 }
 
-.bookDescriptionContainer p,
-.googleBookLink {
+.bookDescriptionContainer p {
   position: absolute;
   opacity: 0;
   left: -5000px;
   top: -5000px;
+}
+
+.googleBookLink {
+  position: absolute;
+  opacity: 0;
 }
 
 .headingParagraph {
@@ -380,6 +388,7 @@ button:hover, button:focus {
   color: #204051;
   -webkit-box-shadow: 5px 5px 5px rgba(32, 64, 81, 0.5);
           box-shadow: 5px 5px 5px rgba(32, 64, 81, 0.5);
+  outline: 3px solid #204051;
 }
 
 .googleBookLink {
@@ -390,6 +399,7 @@ button:hover, button:focus {
   background-color: #84a9ac;
   -webkit-box-shadow: 5px 5px 5px rgba(32, 64, 81, 0.5);
           box-shadow: 5px 5px 5px rgba(32, 64, 81, 0.5);
+  outline: 3px solid #204051;
 }
 
 footer {
@@ -402,11 +412,12 @@ footer p {
 }
 footer a {
   text-decoration: none;
-  color: white;
+  color: #204051;
 }
 footer a:hover, footer a:focus {
-  color: #204051;
-  text-decoration: underline;
+  color: white;
+  border-bottom: 2px solid white;
+  padding-bottom: 0.01%;
 }
 
 header {
@@ -418,6 +429,14 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+header a {
+  text-decoration: none;
+  color: #204051;
+}
+header a:hover, header a:focus {
+  border-bottom: 2px dashed #204051;
+  padding-bottom: 0.05%;
 }
 header .headerContainer {
   display: -webkit-box;
@@ -496,6 +515,9 @@ select {
 select option {
   text-transform: lowercase;
 }
+select:hover, select:focus {
+  outline: 3px solid #204051;
+}
 
 main {
   background-color: #cae8d5;
@@ -552,6 +574,7 @@ main {
 .bookResults .bookListLi:hover, .bookResults .bookListLi:focus {
   -webkit-transform: scale(105%);
           transform: scale(105%);
+  border: 10px solid #84a9ac;
 }
 .bookResults .bookListLi img {
   width: 250px;
@@ -672,6 +695,9 @@ fieldset button {
     margin: 3% 0 3% 0;
     width: 90%;
   }
+  .bookResults .bookListLi:hover, .bookResults .bookListLi:focus {
+    border: 5px solid #84a9ac;
+  }
   .bookResults .bookListLi h3 {
     font-size: 1.2rem;
   }
@@ -711,5 +737,6 @@ fieldset button {
 
   footer p {
     font-size: 0.8rem;
+    line-height: 20px;
   }
 }

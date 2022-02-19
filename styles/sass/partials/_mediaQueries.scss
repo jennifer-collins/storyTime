@@ -74,6 +74,10 @@
     .bookResults .bookListLi {
         margin: 3% 0 3% 0;
         width:90%;
+        &:hover,
+        &:focus {
+            border: 5px solid $fieldsetBackground;
+        }
         h3 {
             font-size: 1.2rem;
         }
@@ -110,6 +114,7 @@
 
     footer p {
         font-size: 0.8rem;
+        line-height: 20px;
     }
 
     
