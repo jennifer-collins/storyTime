@@ -388,7 +388,7 @@ button:hover, button:focus {
   color: #204051;
   -webkit-box-shadow: 5px 5px 5px rgba(32, 64, 81, 0.5);
           box-shadow: 5px 5px 5px rgba(32, 64, 81, 0.5);
-  outline: 3px solid #204051;
+  border: 3px solid #204051;
 }
 
 .googleBookLink {
@@ -517,7 +517,7 @@ select option {
   text-transform: lowercase;
 }
 select:hover, select:focus {
-  outline: 3px solid #204051;
+  border: 3px solid #204051;
 }
 
 main {

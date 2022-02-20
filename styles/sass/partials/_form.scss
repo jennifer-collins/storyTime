@@ -38,6 +38,6 @@ select {
     }
     &:hover,
     &:focus {
-        outline: 3px solid $headingText;
+        border: 3px solid $headingText;
     }
 }
