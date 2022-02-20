@@ -27,6 +27,7 @@ main {
         transition: 0.2s ease-in;
         position: relative;
         cursor: pointer;
+        border: 10px solid $bookListBackground;
         .bookDescription {
             position: absolute;
         }

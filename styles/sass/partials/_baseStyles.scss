@@ -47,6 +47,7 @@ button {
 .googleBookLink {
     text-decoration: none;
     z-index: 1;
+    border: 3px solid $headingText;
         &:hover,
         &:focus {
             background-color: $fieldsetBackground;

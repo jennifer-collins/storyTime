@@ -395,6 +395,7 @@ button:hover, button:focus {
 .googleBookLink {
   text-decoration: none;
   z-index: 1;
+  border: 3px solid #204051;
 }
 .googleBookLink:hover, .googleBookLink:focus {
   background-color: #84a9ac;
@@ -569,6 +570,7 @@ main {
   transition: 0.2s ease-in;
   position: relative;
   cursor: pointer;
+  border: 10px solid #cae8d5;
 }
 .bookResults .bookListLi .bookDescription {
   position: absolute;
