@@ -491,6 +491,7 @@ fieldset {
           justify-content: center;
   border-radius: 40px;
   width: 60%;
+  padding: 1%;
 }
 
 select {
@@ -514,6 +515,7 @@ select {
   background-repeat: no-repeat, repeat;
   background-position: 95% center;
   background-size: 20px;
+  border: 3px solid white;
 }
 select option {
   text-transform: lowercase;
