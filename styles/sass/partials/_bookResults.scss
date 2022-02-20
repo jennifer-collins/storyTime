@@ -34,11 +34,14 @@ main {
         &:focus {
             transform: scale(105%);
             border: 10px solid $fieldsetBackground;
+           
         }
         img {
             width: 250px;
             margin-bottom: 25px;
             border-radius: 30px;
+            box-shadow: 4px 4px rgba($fieldsetBackground, 0.5);
+            
         }
     }
 }

@@ -582,6 +582,8 @@ main {
   width: 250px;
   margin-bottom: 25px;
   border-radius: 30px;
+  -webkit-box-shadow: 4px 4px rgba(132, 169, 172, 0.5);
+          box-shadow: 4px 4px rgba(132, 169, 172, 0.5);
 }
 
 .hidden {
@@ -625,10 +627,6 @@ fieldset select {
     width: 80%;
   }
 
-  header .imgSpan img {
-    width: 35%;
-  }
-
   .bookResults .bookListLi {
     width: calc(50% - 6%);
     margin: 3%;
@@ -666,7 +664,7 @@ fieldset select {
   }
 
   header .imgSpan img {
-    width: 50%;
+    width: 35%;
   }
 
   h2 {
